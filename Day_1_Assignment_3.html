@@ -5,10 +5,45 @@
 </head>
 <body>
 
+	<p>
+		Six Data Types that are primitives, checked by typeof operator: <br />
+		undefined : typeof instance === "undefined" <br />
+		Boolean : typeof instance === "boolean" <br />
+		Number : typeof instance === "number" <br />
+		String : typeof instance === "string" <br />
+		BigInt : typeof instance === "bigint" <br />
+		Symbol : typeof instance === "symbol" <br />
+	</p>
+	
+
+	<p>null : typeof instance === "object". <br />
+		Special primitive type having additional usage for it's value: if object is not inherited, then null is shown;
+	</p>
+
+	<p>Object : typeof instance === "object". <br />
+	 	Special non-data but structural type for any constructed object instance also used as data structures: new Object, new Array, new Map, new Set, new WeakMap, new WeakSet, new Date and almost everything made with new keyword;</p>
+
+	<p>
+		Function non data structure, though it also answers for typeof operator:<br /> 
+		typeof instance === "function". This answer is done as a special shorthand for Functions, though every Function constructor is derived from Object constructor.	
+	</p> 	
+	
+
 	<script type="text/javascript">
 		
-		
-		
+		let a = false;
+		let b = 'apple';
+		let c = 10;
+		let d = function() {
+			console.log("it is a function");
+		}
+		let e = {name: "amit", phone: "9716513349"}
+
+		console.log(typeof a);
+		console.log(typeof b);
+		console.log(typeof c);
+		console.log(typeof d);
+		console.log(typeof e);
 	</script>
 </body>
 </html>
