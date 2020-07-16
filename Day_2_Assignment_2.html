@@ -26,12 +26,35 @@
 		let str = "Hello World";
 		console.log("string length: " + str.length);
 
+		//index of
+		str = "Please locate where 'locate' occurs!";
+		console.log("index of 'locate': " + str.indexOf("locate"));
 
-		//remove from string
-		console.log("remove first letter from string: "+ str.subString(1));
+		//slice
+		str = "Apple, Banana, Kiwi";
+		console.log("updated string: "+ str.slice(7, 13));
 
-		str = str = "Hello World";
-		console.log("show first 2 letter string: "+ str.subString(0,2));
+
+		//sub string
+		str = "Apple, Banana, Kiwi";
+		console.log("updated string: "+str.substring(7, 13));
+
+		//replace
+		str = "Please visit Microsoft!";
+		console.log(str.replace("Microsoft", "W3Schools"));
+
+
+		//toUpperCasse
+		str = "Hello World!";
+		console.log(str.toUpperCase());
+
+
+		//toLowerCasse
+		str = "Hello World!";
+		console.log(str.toLowerCase());
+
+		str = "       Hello World!        ";
+		console.log(str.trim()); 
 		
 	</script>
 </body>
