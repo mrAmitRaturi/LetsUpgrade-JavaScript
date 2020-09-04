@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Assigments | Day 2</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// Question 1: Program to search for a particular character in a string
+		// Solution
+		function searchChar(char, str) {
+			let index = str.indexOf(char);
+			if(index != -1) {
+				return `'${char}' found at the ${index} index!`;
+			} 
+			return `'${char}' is not found in the given string`;
+		}
+		//test
+		console.log(searchChar('th', 'test string th'));
+
+
+
+		// Question 2: Program to convert minutes to seconds
+		// Solution
+		function min2secConvertor(min) {
+			return min * 60;
+		}
+		//test
+		console.log(min2secConvertor(10));
+
+
+
+
+		// Question 3: Program to search for a element in a array of strings
+		// Solution
+		function searchArray(searchTerm, array) {
+			let index = array.indexOf(searchTerm);
+			if(index != -1) {
+				return `'${searchTerm}' found at the ${index} index!`;
+			} 
+			return `'${searchTerm}' is not found in the given array`;
+		}
+		//test
+		console.log(searchArray('my', ['this', 'is', 'my', 'test', 'array']));
+
+
+
+
+		// Question 4: Program to display only elements containing 'a' in them from a array
+		// Solution
+		function searchArrayContainingA(arr) {
+			return arr.filter((ele) => {
+				return ele.indexOf('a') != -1 ? true : false;
+			})
+		}
+		//test
+		console.log(searchArrayContainingA(['this', 'is', 'my', 'test', 'array']));
+
+
+
+
+		// Question 5: Print an array in reverse order
+		// Solution
+		function reverseArray(arr) {
+			let reserveredArray = [];
+			for (var i = arr.length; i > 0; i--) {
+				reserveredArray.push(arr[i - 1]);
+			}
+			return reserveredArray;
+		}
+		//test
+		console.log(reverseArray(['this', 'is', 'my', 'test', 'array']));
+	</script>
+</body>
+</html>
