@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment Day 3 - 4</title>
+
+	<style type="text/css">
+		section {
+			border: 1px solid #ddd;
+			margin: 2rem auto;
+			padding: 2rem;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- solution 1 -->
+	<section class="section1">
+		<h2>Solution 1</h2>
+		<img src="https://homepages.cae.wisc.edu/~ece533/images/airplane.png" id="imgHolder"/>
+		<br />
+		<button type="button" onclick="changeImage(0)">Button 1</button>
+		<button type="button" onclick="changeImage(1)">Button 2</button>
+		<button type="button" onclick="changeImage(2)">Button 3</button>
+	</section>
+	<script type="text/javascript">
+		let images = [
+			'https://homepages.cae.wisc.edu/~ece533/images/airplane.png',
+			'https://homepages.cae.wisc.edu/~ece533/images/arctichare.png',
+			'https://homepages.cae.wisc.edu/~ece533/images/baboon.png'
+		];
+
+		function changeImage(index) {
+			let img = document.querySelector("#imgHolder");
+			img.setAttribute("src", images[index]);
+		}
+	</script>
+
+
+
+	<!-- solution 2 -->
+	<section class="section2">
+		<h2>Solution 2</h2>
+		<input type="text" id="firstInput" />
+		<input type="text" id="secondInput" />
+		<button type="button" onclick="cloneValues()">Copy Value</button>
+	</section>
+	<script type="text/javascript">
+		function cloneValues() {
+			let firstInput = document.querySelector("#firstInput");
+			let secondInput = document.querySelector("#secondInput");
+
+			secondInput.value = firstInput.value;
+		}
+	</script>
+
+
+	<!-- solution 3 -->
+	<section class="section2">
+		<h2>Solution 3</h2>
+		<pre>
+			<div id="s3"></div>
+		</pre>
+	</section>	
+	<script type="text/javascript">
+		let myArray = [{
+			name: 'Amit',
+			age: 25,
+			country: 'India',
+			hobbies: ['Reading', 'Movies', 'Traveling']
+		},
+		{
+			name: 'Bhawesh',
+			age: 35,
+			country: 'China',
+			hobbies: ['Reading', 'Movies', 'Traveling']
+		},
+		{
+			name: 'Mohit',
+			age: 25,
+			country: 'India',
+			hobbies: ['Movies', 'Ludo']
+		}];
+
+		function printArray(arr) {
+			let template = arr.map((item) => {
+				return `
+					Name: ${item.name}
+					age: ${item.age}
+					country: ${item.country}
+					hobbies: ${item.hobbies.join(", ")}
+				`
+				}).join("");
+			return template;
+		}	
+
+		document.querySelector("#s3").textContent = printArray(myArray)
+		console.log(printArray(myArray));
+	</script>
+
+
+
+
+	<!-- solution 4 -->	
+	<section class="section4">
+		<h2>Solution 4</h2>
+		<pre>
+			A.
+			<div id="a"></div>
+			
+			B.
+			<div id="b"></div>
+		</pre>
+	</section>
+	<script type="text/javascript">
+		function ageLT30(arr) {
+			return arr.filter((item) => {
+				return item.age < 30;
+			});
+		}
+
+		function countryIndia(arr) {
+			return arr.filter((item) => {
+				return item.country == 'India';
+			})
+		}
+
+		document.querySelector("#a").textContent = printArray(ageLT30(myArray));
+		document.querySelector("#b").textContent = printArray(countryIndia(myArray));
+	</script>
+</body>
+</html>
+
